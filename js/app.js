@@ -6,6 +6,7 @@ function dañoArma(){
     let Skill = forma["Skill"];
     let Arma = forma["Arma"];
     let dañoArma = (parseInt(Skill.value)/5) + (1.2*(parseInt(Arma.value)*((parseInt(Nivel.value)+4)/28)));
+    let dañoDist = (0.09*parseInt(Skill.value)*parseInt(Arma.value)+(parseInt(Nivel.value)/5)) ;
     let berserkMax = ((1.5*(parseInt(Skill.value)+(parseInt(Arma.value)))) + parseInt(Nivel.value)/5);
     let fierceBerserkMax = ((3*(parseInt(Skill.value)+(2*parseInt(Arma.value)))) + parseInt(Nivel.value)/5);
     let groundShake = ((1.1*(parseInt(Skill.value)+(parseInt(Arma.value)))) + parseInt(Nivel.value)/5);
@@ -17,6 +18,10 @@ function dañoArma(){
         dañoArma = "No puede esta vacio";
     document.getElementById("dañoArma").innerHTML = `Daño de Arma: ${Math.round(dañoArma)}`;
     console.log(`Resultado: ${dañoArma}`)
+
+    if(isNaN(dañoDist))
+        dañoArma = "No puede esta vacio";
+    document.getElementById("dañoDist").innerHTML = `Daño de Distancia: ${Math.round(dañoDist)}`;
 
     if(isNaN(fierceBerserkMax))
         fierceBerserkMax = "No puede esta vacio";
@@ -34,10 +39,10 @@ function dañoArma(){
         whirlwindThrow = "No puede esta vacio";;
     document.getElementById("whirlwindThrow").innerHTML = `Whirlwind Throw: ${Math.round(whirlwindThrow)} Max`;
 
-    if(isNaN(sd))
+    if(isNaN(sd)) 
         sd = "No puede esta vacio";;
     document.getElementById("sd").innerHTML = `Sudden Death: ${Math.round(sd)} Max`;
-
+    
     if(isNaN(ice))
         ice = "No puede esta vacio";;
     document.getElementById("ice").innerHTML = `Ice Strike: ${Math.round(ice)} Max`;
