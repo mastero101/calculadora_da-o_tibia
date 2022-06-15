@@ -25,25 +25,35 @@ function dañoArma(){
 
     if(isNaN(fierceBerserkMax))
         fierceBerserkMax = "No puede esta vacio";
+    if(parseInt(Nivel.value) >= 90) 
     document.getElementById("fierceBerserkMax").innerHTML = `Fierce Berserk: ${fierceBerserkMax} Max`;
 
     if(isNaN(berserkMax))
         berserkMax = "No puede esta vacio";
+    if(parseInt(Nivel.value) >= 35) 
     document.getElementById("berserkMax").innerHTML = `Berserk: ${berserkMax} Max`;
 
     if(isNaN(groundShake))
-        groundShake = "No puede esta vacio";;
+        groundShake = "No puede esta vacio";
+    if(parseInt(Nivel.value) >= 40) 
     document.getElementById("groundShake").innerHTML = `GroundShaker: ${Math.round(groundShake)} Max`;
     
     if(isNaN(whirlwindThrow))
-        whirlwindThrow = "No puede esta vacio";;
+        whirlwindThrow = "No puede esta vacio";
+    if(parseInt(Nivel.value) >= 37) 
     document.getElementById("whirlwindThrow").innerHTML = `Whirlwind Throw: ${Math.round(whirlwindThrow)} Max`;
 
     if(isNaN(sd)) 
-        sd = "No puede esta vacio";;
+        sd = "No puede esta vacio";
+    if(parseInt(Magic.value) >= 14 && parseInt(Nivel.value) >= 45) 
     document.getElementById("sd").innerHTML = `Sudden Death: ${Math.round(sd)} Max`;
     
     if(isNaN(ice))
-        ice = "No puede esta vacio";;
+        ice = "No puede esta vacio";
+    if(parseInt(Nivel.value) >= 15) 
     document.getElementById("ice").innerHTML = `Ice Strike: ${Math.round(ice)} Max`;
+}
+
+function limpiar(){
+    location.reload()
 }

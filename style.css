@@ -3,6 +3,11 @@ body {
     align-items: center;
 }
 
+h1 {
+    color:white;
+    padding: 0px 0px 0px 50px;
+}
+
 .form-control {
     background-color:white;
     max-width: 210px;
