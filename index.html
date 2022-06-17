@@ -14,25 +14,25 @@
             <div class="mb-3">
                 <label for="Nivel">Nivel</label>
                 <input type="number" class="form-control"
-                    placeholder="Escribe tu Nivel" id="Nivel"/>
+                    placeholder="Escribe tu Nivel" id="Nivel" onkeydown="validar()">
             </div>
             <div class="mb-3">
                 <label for="Skill">Skill</label>
                 <input type="number" class="form-control" 
-                    placeholder="Escribe tu Skill" id="Skill">
+                    placeholder="Escribe tu Skill" id="Skill" onkeydown="validar()">
             </div>
             <div class="mb-3">
               <label for="Arma">Ataque Arma</label>
               <input type="number" class="form-control" 
-                  placeholder="Escribe el ATK del Arma" id="Arma">
+                  placeholder="Escribe el ATK del Arma" id="Arma" onkeydown="validar()">
           </div>
           <div class="mb-3">
             <label for="Magic">Magic Level</label>
             <input type="number" class="form-control" 
-                placeholder="Escribe tu Magic Level" id="Magic">
+                placeholder="Escribe tu Magic Level" id="Magic" onkeydown="validar()">
       </div>
         </form>
-        <button class="btn btn-primary mb-3" onclick="dañoArma()"
+        <button class="btn btn-primary mb-3" id="calcular" onclick="dañoArma()" disabled 
         >Calcular</button>
         <button class="btn btn-primary mb-3" onclick="limpiar()"
         >Limpiar</button>

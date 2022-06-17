@@ -1,6 +1,7 @@
 console.log("aplicacion calculadora");
 
 function dañoArma(){
+
     const forma = document.getElementById("forma");
     let Nivel = forma["Nivel"];
     let Skill = forma["Skill"];
@@ -29,6 +30,7 @@ function dañoArma(){
         etherealSpear = "No puede esta vacio";
     if(parseInt(Nivel.value) >= 23)
     document.getElementById("etherealSpear").innerHTML = `Ethereal Spear: ${Math.round(etherealSpear)} Max`;
+    if(parseInt(Nivel.value) >= 23)
     document.getElementById("etherealSpearMin").innerHTML = `------------------ ${Math.round(etherealSpearMin)} Min`;
 
     if(isNaN(fierceBerserkMax))
@@ -60,8 +62,14 @@ function dañoArma(){
         ice = "No puede esta vacio";
     if(parseInt(Nivel.value) >= 15) 
     document.getElementById("ice").innerHTML = `Ice Strike: ${Math.round(ice)} Max`;
+    
 }
 
 function limpiar(){
     location.reload()
+}
+
+function validar() {
+    const botonActivo = document.getElementById("calcular");
+    botonActivo.disabled = false;
 }
